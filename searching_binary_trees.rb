@@ -34,7 +34,7 @@ def breadth_first_search(value)
     queue << current.left unless current.left.nil?
     queue << current.right unless current.right.nil?
   end
-  return nil
+  nil
 end
 
 def depth_first_search(value)
@@ -46,7 +46,7 @@ def depth_first_search(value)
     stack << current.right unless current.right.nil?
     stack << current.left unless current.left.nil?
   end
-  return nil
+  nil
 end
 
 def dfs_rec(value, current=@root)
@@ -54,7 +54,7 @@ def dfs_rec(value, current=@root)
   return current if current.value == value
   left = dfs_rec(value, current.left)
   right = dfs_rec(value, current.right)
-  return left || right
+  left || right
 end
 end
 
